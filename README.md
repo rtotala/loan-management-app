@@ -1,7 +1,9 @@
 # Loan Management App 
 ![diagram-export-16_09_2023, 03_06_35](https://github.com/rtotala/loan-management-app/assets/6474355/e8a19207-74ea-4257-be07-caa004355c98)
+Idea Structure for North star view reference.  
 
 ![diagram-export-16_09_2023, 03_04_59](https://github.com/rtotala/loan-management-app/assets/6474355/e6947d16-82f2-49d2-ba01-b50de3853342)
+Current Model
 
 
 # Tech Stack  
@@ -26,6 +28,8 @@ Performance: For read-heavy operations like getScheduledRepayments, Loans etc, M
 
 Complex Queries: MongoDB supports complex queries and aggregations, which could be useful for generating recommendations based on multiple factors.
 
+## Current stack 
+Current stack is Node.js, Express & MongoDb. 
 
 ## Manual Installation
 
@@ -39,15 +43,6 @@ Set the environment variables:
 
 ```bash
 cp .env.example .env
-
-# open .env and modify the environment variables (if needed)
-```
-
-```bash
-cp .env.example .env
-
-# open .env and modify the environment variables (if needed)
-```
 
 ## Commands
 
