@@ -1,11 +1,8 @@
 # Loan Management App 
+
+## Idea Structure for North star view reference. 
 ![HLD](https://github.com/rtotala/loan-management-app/assets/6474355/e8a19207-74ea-4257-be07-caa004355c98)
-Idea Structure for North star view reference.  
-
-![diagram-export-16_09_2023, 03_04_59](https://github.com/rtotala/loan-management-app/assets/6474355/e6947d16-82f2-49d2-ba01-b50de3853342)
-Current Model
-
-
+ 
 # Tech Stack  
 
 ## Recommended Microservices Architecture
@@ -31,33 +28,31 @@ Complex Queries: MongoDB supports complex queries and aggregations, which could 
 ## Current stack 
 Current stack is Node.js, Express & MongoDb. 
 
+## Current ER Model
+![diagram-export-16_09_2023, 03_04_59](https://github.com/rtotala/loan-management-app/assets/6474355/e6947d16-82f2-49d2-ba01-b50de3853342)
+
 ## Manual Installation
 
 Install the dependencies:
-
 ```bash
 npm install 
 ```
 
 Set the environment variables:
-
 ```bash
 cp .env.example .env
 
 ## Commands
 
 Running locally:
-
 ```bash
 npm run dev
 ```
 
 Running in production:
-
 ```bash
 npm run start
 ```
-
 
 ## Environment Variables
 
