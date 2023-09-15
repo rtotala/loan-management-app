@@ -101,7 +101,7 @@ src\
 
 ### API Endpoints
 
-List of available routes:
+List of available routes: https://winter-eclipse-878966.postman.co/workspace/Rupeek~d142949e-ea53-4bad-ba43-528785dd9e28/collection/2553501-14792e3b-38c9-4b2d-b9aa-6d64ce9ba47c?action=share&creator=2553501
 
 **Auth routes**:\
 `POST /v1/auth/register` - register\
