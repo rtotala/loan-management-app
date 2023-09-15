@@ -1,4 +1,31 @@
 # Loan Management App 
+![diagram-export-16_09_2023, 03_06_35](https://github.com/rtotala/loan-management-app/assets/6474355/e8a19207-74ea-4257-be07-caa004355c98)
+
+![diagram-export-16_09_2023, 03_04_59](https://github.com/rtotala/loan-management-app/assets/6474355/e6947d16-82f2-49d2-ba01-b50de3853342)
+
+
+# Tech Stack  
+
+## Recommended Microservices Architecture
+
+| Microservice             | Recommended Type          | Recommended Framework | Reason                                                                                   |
+|--------------------------|---------------------------|-----------------------|------------------------------------------------------------------------------------------|
+| Authentication Service   | Serverless or Auto-Scaling Pods | Node.js or Python  | - Serverless is cost-effective for sporadic usage.<br>- Node.js and Python have strong libraries for authentication. |
+| Loan Management Service  | Auto-Scaling Pods         | Java or Node.js       | - Java is robust for financial calculations.<br>- Node.js for easier JSON manipulation.   |
+| Admin Approval Service   | Serverless                | Python or Node.js     | - Serverless for cost-effectiveness.<br>- Python and Node.js for quick development.      |
+| Payment Service          | Auto-Scaling Pods         | Java or Python        | - Java for robustness and financial calculations.<br>- Python for quick integration with payment gateways.          |
+
+## Database Choice 
+Ideally Postgresql should be the primary database for Loan Management service. However as the product is just getting started MongoDb is the recommended choice. Reasons are listed below. 
+
+Flexibility: MongoDB is schema-less, which means you can easily add fields like customer behavior, preferences, or other metrics without affecting existing data. This is useful for  systems where the data model might evolve over time.
+
+Scalability: If your app grows and you collect more data for loans, schemes, payments etc, MongoDB can scale horizontally easily.
+
+Performance: For read-heavy operations like getScheduledRepayments, Loans etc, MongoDB can be faster as it allows for data denormalization and in-memory storage.
+
+Complex Queries: MongoDB supports complex queries and aggregations, which could be useful for generating recommendations based on multiple factors.
+
 
 ## Manual Installation
 
@@ -36,47 +63,6 @@ Running in production:
 npm run start
 ```
 
-Testing:
-
-```bash
-# run all tests
-npm run test
-
-# run all tests in watch mode
-npm run test:watch
-
-# run test coverage
-npm run coverage
-```
-
-Docker:
-
-```bash
-# run docker container in development mode
-npm run docker:dev
-
-# run docker container in production mode
-npm run docker:prod
-
-# run all tests in a docker container
-npm run docker:test
-```
-
-Linting:
-
-```bash
-# run ESLint
-npm run lint
-
-# fix ESLint errors
-npm run lint:fix
-
-# run prettier
-npm run prettier
-
-# fix prettier errors
-npm run prettier:fix
-```
 
 ## Environment Variables
 
@@ -122,10 +108,6 @@ src\
  |--app.js          # Express app
  |--index.js        # App entry point
 ```
-
-## API Documentation
-
-To view the list of available APIs and their specifications, run the server and go to `http://localhost:3000/v1/docs` in your browser. This documentation page is automatically generated using the [swagger](https://swagger.io/) definitions written as comments in the route files.
 
 ### API Endpoints
 
