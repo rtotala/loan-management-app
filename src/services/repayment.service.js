@@ -12,8 +12,10 @@ const queryRepayments = async (filter, options) => {
 };
 
 const addRepayment = async (repaymentBody) => {
+
+  const session = await mongoose.startSession();
+  
   try {
-    const session = await mongoose.startSession();
     session.startTransaction();
 
     // Create the repayment record first
@@ -67,7 +69,7 @@ const addRepayment = async (repaymentBody) => {
   } catch (error) {
     await session.abortTransaction();
     session.endSession();
-    logger.warn('Transaction Aborted', repaymentBody);
+    console.log(error);
     throw new Error("Transaction Aborted, Please check with Administrator")
   }
 };

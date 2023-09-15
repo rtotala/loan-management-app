@@ -3,9 +3,10 @@ const { objectId } = require('./custom.validation');
 
 const createRepayment = {
   body: Joi.object().keys({
-    repaymentId: Joi.string().custom(objectId),
+    repaymentId: Joi.string().required(),
     amountPaid: Joi.number().required(),
     paymentDate: Joi.date().required(),
+    loanId: Joi.string().required(),
   }),
 };
 

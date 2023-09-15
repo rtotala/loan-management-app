@@ -3,7 +3,7 @@ const catchAsync = require('../utils/catchAsync');
 const { repaymentService } = require('../services');
 
 const createRepayment = catchAsync(async (req, res) => {
-  const repayment = await repaymentService.createRepayment(req.body);
+  const repayment = await repaymentService.addRepayment(req.body);
   res.status(httpStatus.CREATED).send(repayment);
 });
 

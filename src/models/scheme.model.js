@@ -1,9 +1,11 @@
+const { number } = require('joi');
 const mongoose = require('mongoose');
+const { toJSON, paginate } = require('./plugins');
 
 const schemeSchema = mongoose.Schema(
   {
     term: {
-      type: String,
+      type: Number,
       required: true,
     },
     frequency: {

@@ -3,7 +3,7 @@ const catchAsync = require('../utils/catchAsync');
 const { loanService } = require('../services');
 
 const createLoan = catchAsync(async (req, res) => {
-  const loan = await loanService.createLoan(req.body);
+  const loan = await loanService.createLoanAndScheduledRepayments(req.body);
   res.status(httpStatus.CREATED).send(loan);
 });
 

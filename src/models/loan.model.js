@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const { toJSON, paginate } = require('./plugins');
 
 const loanSchema = mongoose.Schema(
   {
-    userID: {
+    userId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true,
@@ -11,7 +12,7 @@ const loanSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
-    schemeID: {
+    schemeId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Scheme',
       required: true,

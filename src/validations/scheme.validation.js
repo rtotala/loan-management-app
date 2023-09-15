@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 const createScheme = {
   body: Joi.object().keys({
-    term: Joi.string().required(),
+    term: Joi.number().integer().required(),
     frequency: Joi.string().required().allow('WEEKLY'),
   }),
 };

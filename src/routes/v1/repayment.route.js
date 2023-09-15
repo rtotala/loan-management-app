@@ -7,7 +7,7 @@ const repaymentController = require('../../controllers/repayment.controller');
 const router = express.Router();
 
 router
-  .route('/')
+  .route('/:userId')
   .post(auth('manageRepayments'), validate(repaymentValidation.createRepayment), repaymentController.createRepayment)
   .get(auth('getRepayments'), validate(repaymentValidation.getRepayments), repaymentController.getRepayments);
 

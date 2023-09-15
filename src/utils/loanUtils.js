@@ -8,7 +8,6 @@ const splitAmount = (totalAmount, parts) => {
 
   // Distribute the remaining amount to the last part
   amounts[parts - 1] += remainingAmount;
-
   return amounts;
 };
 

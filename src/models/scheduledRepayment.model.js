@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const { toJSON, paginate } = require('./plugins');
 
 const scheduledRepaymentSchema = mongoose.Schema(
   {
-    loanID: {
+    loanId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Loan',
       required: true,

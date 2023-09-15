@@ -1,11 +1,17 @@
 const mongoose = require('mongoose');
+const { toJSON, paginate } = require('./plugins');
 
 const repaymentSchema = mongoose.Schema(
   {
-    repaymentID: {
-      type: mongoose.Schema.Types.ObjectId,
+    repaymentId: {
+      type: mongoose.Schema.Types.String,
       ref: 'ScheduledRepayment',
       required: true,
+    },
+    loanId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Loan',
+        required: true,
     },
     amountPaid: {
       type: Number,
