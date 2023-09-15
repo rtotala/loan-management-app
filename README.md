@@ -1,5 +1,5 @@
 # Loan Management App 
-![diagram-export-16_09_2023, 03_06_35](https://github.com/rtotala/loan-management-app/assets/6474355/e8a19207-74ea-4257-be07-caa004355c98)
+![HLD](https://github.com/rtotala/loan-management-app/assets/6474355/e8a19207-74ea-4257-be07-caa004355c98)
 Idea Structure for North star view reference.  
 
 ![diagram-export-16_09_2023, 03_04_59](https://github.com/rtotala/loan-management-app/assets/6474355/e6947d16-82f2-49d2-ba01-b50de3853342)
