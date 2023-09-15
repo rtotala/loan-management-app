@@ -143,12 +143,11 @@ List of available routes:
 `POST /v1/repayments/:loanId` - create a Repayment for given Loan\
 `GET /v1/repayments/:loanId` - get all Repayments for given Loan\
 
-## License
-
-[MIT](LICENSE)
-
 ## Tests
 Skipped due to time limit
 
-## Node
+## Note
 Node architechture inspired from https://github.com/hagopj13/node-express-boilerplate
+
+## License
+[MIT](LICENSE)
